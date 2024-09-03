@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { LogoEffect } from "./LogoEffect";
 import { PortfolioButton } from "@/components/ui/button"
 import Brands from "../Brands";
 
