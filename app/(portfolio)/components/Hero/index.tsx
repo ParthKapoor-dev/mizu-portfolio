@@ -14,7 +14,7 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 max-md:px-2">
               <div className="mx-auto max-w-[800px] text-center ">
-                <h1 className="mb-5 text-5xl max-md:text-2xl font-bold leading-tight text-black dark:text-white sm:leading-tight  md:leading-tight">
+                <h1 className="mb-5 text-5xl max-md:text-3xl font-bold leading-tight text-black dark:text-white sm:leading-tight  md:leading-tight">
                   Elevate your brand with a timeless minimal logo.
                 </h1>
                 <p className="mb-12 text-xl max-md:text-base !leading-relaxed text-body-color dark:text-body-color-dark ">
@@ -22,11 +22,11 @@ const Hero = () => {
                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                   when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </p>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <PortfolioButton variant="filled" >
-                    Hello World
+                <div className="flex items-center justify-center gap-8 max-md:flex-col max-md:gap-4">
+                  <PortfolioButton variant="filled" containerStyles="max-md:w-full" >
+                    Let's Build
                   </PortfolioButton>
-                  <PortfolioButton>
+                  <PortfolioButton containerStyles="max-md:w-full">
                     Learn More
                   </PortfolioButton>
                 </div>
