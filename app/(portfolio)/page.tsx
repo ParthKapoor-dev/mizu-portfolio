@@ -15,7 +15,7 @@ export default function Home() {
     const targetRefs: RefObject<HTMLDivElement>[] = [];
     return (
         <>
-            <Cursor cursorClassName="dark:bg-orangeColor border-[0.5px] border-orangeColor " isHoveringClassName="dark:bg-orangeColor/20 " text="View Project" />
+            <Cursor cursorClassName="dark:bg-orangeColor border-[0.5px] border-orangeColor max-md:hidden" isHoveringClassName="dark:bg-orangeColor/20 " text="View Project" />
             <ScrollUp />
             <Hero />
             <Features targetRefs={targetRefs} />

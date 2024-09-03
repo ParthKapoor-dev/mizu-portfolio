@@ -39,7 +39,7 @@
 }
 
 .hover-glow:hover{
-  border : 10px solid rgba(252, 210, 147, 0.953);
+  /* border : 10px solid rgba(252, 210, 147, 0.953); */
   box-shadow: 0 0 500px 2px rgba(255, 167, 100, 0.602);  
 
 }
