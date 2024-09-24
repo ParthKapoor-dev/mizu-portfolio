@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "../../../../components/ThemeToggler";
 import menuData from "./menuData";
+import { Webhook } from "lucide-react";
 
 const Header = () => {
   // Navbar toggle
@@ -54,7 +55,9 @@ const Header = () => {
                 className={`header-logo block w-full ${sticky ? "py-5 lg:py-2" : "py-8"
                   } `}
               >
-                <Image
+
+                <Webhook />
+                {/* <Image
                   src="/images/logo/22.svg"
                   alt="logo"
                   width={140}
@@ -67,7 +70,7 @@ const Header = () => {
                   width={10}
                   height={30}
                   className="hidden w-full dark:block"
-                />
+                /> */}
               </Link>
             </div>
             <div className="flex w-full items-center justify-center px-4 ml-20">

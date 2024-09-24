@@ -6,7 +6,7 @@ import Marquee from "@/components/magicui/marquee";
 
 const Brands = () => {
   return (
-    <section className="overflow-hidden relative">
+    <section className="overflow-hidden relative ">
       <Marquee className="">
         {brandsData.map((brand) => (
           <SingleBrand key={brand.id} brand={brand} />
@@ -25,15 +25,27 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
   const { href, image, imageLight, name } = brand;
 
   return (
-    <div className="flex w-1/2 items-center justify-center px-3 py-[15px] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+    <div className="flex items-center justify-center px-3 max-md:px-1 py-[15px] max-md:py-0 w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
       <a
         href={href}
         target="_blank"
         rel="nofollow noreferrer"
-        className="relative h-10 w-full opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100"
+        className="relative w-full opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100"
       >
-        <Image src={imageLight || ""} alt={name} width={200} height={200} className="hidden dark:block" />
-        <Image src={image} alt={name} width={200} height={200} className="block dark:hidden" />
+        <Image
+          src={imageLight || ""}
+          alt={name}
+          width={200}
+          height={200}
+          className="hidden dark:block max-md:w-[120px]"
+        />
+        <Image
+          src={image}
+          alt={name}
+          width={200}
+          height={200}
+          className="block dark:hidden max-md:w-[120px] max-md:h-[120px]"
+        />
       </a>
     </div>
   );

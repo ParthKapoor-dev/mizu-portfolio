@@ -37,18 +37,19 @@ interface FilledButtonProps {
     onClick?: () => void,
     className?: string,
     variant?: 'filled' | 'empty',
-    children: React.ReactNode
+    children: React.ReactNode,
+    containerStyles? : string
 }
 
-export function PortfolioButton({ children, onClick, className, variant }: FilledButtonProps) {
+export function PortfolioButton({ children, onClick, className, variant , containerStyles }: FilledButtonProps) {
     const [isHovered, setIsHovered] = useState(false);
     const duration = 0.5;
     const gap = 40
 
     return (
-        <div className={cn('p-4 border-[0.5px] border-orangeColor rounded-xl', variant == 'filled' && 'bg-orangeColor')}>
+        <div className={cn('p-4 border-[0.5px] border-lightGreenColor rounded-xl', variant == 'filled' && 'bg-lightGreenColor' , containerStyles)}>
             <motion.button
-                className={cn("relative overflow-hidden text-white rounded", className , variant !== 'filled' && 'text-orangeColor')}
+                className={cn("relative overflow-hidden text-white rounded", className)}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 onClick={onClick}

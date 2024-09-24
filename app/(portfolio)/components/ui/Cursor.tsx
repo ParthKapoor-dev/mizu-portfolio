@@ -149,7 +149,7 @@ export default function Cursor({  cursorClassName , isHoveringClassName , text}:
 
   return (
     <CursorElement
-      attachToParent
+      attachToParent={false}
       variants={{
         initial: { scale: 0.3, opacity: 0 },
         animate: { scale: 1, opacity: 1 },
@@ -157,6 +157,8 @@ export default function Cursor({  cursorClassName , isHoveringClassName , text}:
       }}
       springConfig={{
         bounce: 0.001,
+        damping : 25,
+        stiffness : 400
       }}
       transition={{
         ease: 'easeInOut',
