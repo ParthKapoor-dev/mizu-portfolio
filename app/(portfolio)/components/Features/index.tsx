@@ -3,7 +3,9 @@ import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
 
-const Features = ({ targetRefs }: { targetRefs: RefObject<HTMLDivElement>[] }) => {
+const Features = () => {
+
+  const displayFeatures = featuresData.slice(0, 2);
 
   return (
     <>
@@ -16,10 +18,15 @@ const Features = ({ targetRefs }: { targetRefs: RefObject<HTMLDivElement>[] }) =
           />
 
           <div className="grid grid-cols-1 gap-x-4 gap-y-4 md:grid-cols-2 lg:grid-cols-2 ">
-            {featuresData.map((feature, index) => (
-              <SingleFeature key={feature.id} idx={index} feature={feature} targetRefs={targetRefs} />
+            {displayFeatures.map((feature, index) => (
+              <SingleFeature key={feature.id} idx={index} feature={feature} />
             ))}
           </div>
+
+          <div className="mt-4 mx-[22.5%] max-md:mx-0">
+            <SingleFeature feature={featuresData[2]} idx={2} className=" min-h-[30vh]" />
+          </div>
+
         </div>
       </section>
     </>

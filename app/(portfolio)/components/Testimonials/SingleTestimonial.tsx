@@ -20,7 +20,7 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
 
   return (
     <div className="w-fit max-w-[40vw] max-md:max-w-[80vw]">
-      <div className="rounded-lg bg-white p-8 max-md:px-4 shadow-two duration-300 hover:shadow-one dark:bg-black/60 dark:shadow-three dark:hover:shadow-gray-dark ">
+      <div className="rounded-2xl bg-white p-8 max-md:px-4 shadow-two duration-300 hover:shadow-one dark:bg-black/60 dark:shadow-three dark:hover:shadow-gray-dark ">
         <div className="mb-5 flex items-center space-x-1">{ratingIcons}</div>
         <p className="mb-8 max-md:mb-4 border-b border-body-color border-opacity-10 pb-8 max-md:pb-4 text-base max-md:text-sm leading-relaxed text-body-color dark:border-white dark:border-opacity-10 dark:text-white">
           “{content}

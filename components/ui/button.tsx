@@ -47,9 +47,9 @@ export function PortfolioButton({ children, onClick, className, variant , contai
     const gap = 40
 
     return (
-        <div className={cn('p-4 border-[0.5px] border-orangeColor rounded-xl', variant == 'filled' && 'bg-orangeColor' , containerStyles)}>
+        <div className={cn('p-4 border-[0.5px] border-lightGreenColor rounded-xl', variant == 'filled' && 'bg-lightGreenColor' , containerStyles)}>
             <motion.button
-                className={cn("relative overflow-hidden text-white rounded", className , variant !== 'filled' && 'text-orangeColor')}
+                className={cn("relative overflow-hidden text-white rounded", className)}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 onClick={onClick}

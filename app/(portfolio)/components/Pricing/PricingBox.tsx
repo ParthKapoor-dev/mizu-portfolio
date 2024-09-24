@@ -1,3 +1,13 @@
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+
+
 
 const PricingBox = (props: {
   price: string;
@@ -10,28 +20,49 @@ const PricingBox = (props: {
 
 
   return (
-    <div className="w-full hover-glow duration-200 hover:scale-105 border-neutral-100 rounded-xl">
-      <div className="relative z-10  bg-white px-8  py-10 shadow-three hover:shadow-one dark:bg-neutral-900 dark:shadow-two dark:hover:shadow-gray-dark rounded-xl ">
-        <div className="flex items-center justify-center">
-          <h3 className="price mb-2 text-[48px] font-bold text-black dark:text-white">
-            $<span className="amount">{price}</span>
-            <span className="time text-xl font-medium text-body-color">
-              /{duration}
-            </span>
-          </h3>
-          {/* <h4 className="mb-2 text-xl font-bold text-dark dark:text-white">
+
+    <Dialog>
+      <DialogTrigger>
+
+        <div className="w-full hover-glow duration-200 hover:scale-105 border-neutral-100 rounded-xl">
+          <div className="relative z-10  bg-white px-8  py-10 shadow-three hover:shadow-one dark:bg-neutral-900 dark:shadow-two dark:hover:shadow-gray-dark rounded-xl ">
+            <div className="flex items-center justify-center">
+              <h3 className="price mb-2 text-[48px] font-bold text-black dark:text-white">
+                $<span className="amount">{price}</span>
+                <span className="time text-xl font-medium text-body-color">
+                  /{duration}
+                </span>
+              </h3>
+              {/* <h4 className="mb-2 text-xl font-bold text-dark dark:text-white">
             {packageName}
           </h4> */}
-        </div>
-        <p className="mb-7 text-base text-body-color">{subtitle}</p>
-        <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
-          <div className="flex w-full items-center justify-center bg-orangeColor/80 p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp rounded-xl ">
-            {packageName}
+            </div>
+            <p className="mb-7 text-base text-body-color">{subtitle}</p>
+            <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
+              <div className="flex w-full items-center justify-center bg-orangeColor/80 p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp rounded-xl ">
+                {packageName}
+              </div>
+            </div>
+            <div>{children}</div>
           </div>
         </div>
-        <div>{children}</div>
-      </div>
-    </div>
+
+      </DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>
+            {packageName}
+          </DialogTitle>
+          <DialogDescription>
+            This action cannot be undone. This will permanently delete your account
+            and remove your data from our servers.
+          </DialogDescription>
+        </DialogHeader>
+      </DialogContent>
+    </Dialog>
+
+
+
   );
 };
 
