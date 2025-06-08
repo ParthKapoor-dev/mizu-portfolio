@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { PortfolioButton } from "@/components/ui/button"
+import { PortfolioButton } from "@/components/ui/button";
 import Brands from "../Brands";
 import { useRouter } from "next/navigation";
 
 const Hero = () => {
-
   const router = useRouter();
 
-  function handleBuildPage(){
+  function handleBuildPage() {
     router.push("/build");
   }
 
@@ -15,42 +14,47 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative px-[15vw] max-md:px-[2vw] z-10 overflow-hidden  pb-16 flex h-screen flex-col justify-center gap-8 pt-[12vh] background-half-shade "
+        className="relative px-[15vw] max-md:px-[2vw] z-10 overflow-hidden  pb-16 flex h-screen flex-col justify-center pt-[12vh] background-half-shade max-md:gap-6 "
       >
-
         <div className="w-full flex items-center justify-center flex-col gap-6">
-
-          <video loop autoPlay className="!rounded-[16px] overflow-hidden h-[60vh] max-md:h-[20vh] max-md:px-[4vw] max-md:hidden">
+          <video
+            loop
+            autoPlay
+            className="!rounded-[16px] overflow-hidden h-[60vh] max-md:h-[20vh] max-md:px-[4vw] max-md:hidden"
+          >
             <source src="/videos/sample_monk.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
-          <video loop autoPlay muted className="!rounded-[16px] overflow-hidden h-[60vh] hidden max-md:block">
+          <video
+            loop
+            autoPlay
+            muted
+            className="!rounded-[16px] overflow-hidden h-[60vh] hidden max-md:block"
+          >
             <source src="/videos/sample_monk_mobile.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
           <div className="flex items-center gap-6">
-
-            <PortfolioButton variant="filled" containerStyles="" onClick={handleBuildPage} >
+            <PortfolioButton
+              variant="filled"
+              containerStyles=""
+              onClick={handleBuildPage}
+            >
               Let's Build
             </PortfolioButton>
-            <PortfolioButton containerStyles="">
-              Learn More
-            </PortfolioButton>
+            <PortfolioButton containerStyles="">Learn More</PortfolioButton>
           </div>
-
         </div>
 
         <Brands />
-
       </section>
     </>
   );
 };
 
 export default Hero;
-
 
 // CONTAINER
 
@@ -65,7 +69,6 @@ export default Hero;
 //                     Your browser does not support the video tag.
 //                   </video>
 //                 </div>
-
 
 //                 {/* <h1 className="mb-5 text-5xl max-md:text-3xl font-bold leading-tight text-black dark:text-white sm:leading-tight  md:leading-tight">
 //                   Elevate your brand with a timeless minimal logo.

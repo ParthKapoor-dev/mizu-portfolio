@@ -1,4 +1,3 @@
-
 import { Brand } from "../../types/brand";
 import Image from "next/image";
 import brandsData from "./brandsData";
@@ -6,7 +5,7 @@ import Marquee from "@/components/magicui/marquee";
 
 const Brands = () => {
   return (
-    <section className="overflow-hidden relative ">
+    <section className="overflow-hidden relative bg-opacity-20 ">
       <Marquee className="">
         {brandsData.map((brand) => (
           <SingleBrand key={brand.id} brand={brand} />
@@ -14,7 +13,6 @@ const Brands = () => {
       </Marquee>
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-darkColor"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-darkColor"></div>
-
     </section>
   );
 };
